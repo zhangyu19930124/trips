@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>自驾游</title>
+	<link rel="stylesheet" type="text/css" href="css/zijia1.css">
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/jquery.fullPage.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
+	<script type="text/javascript" src="js/zijia.js"></script>
+</head>
+<body>
+	<header>
+	  <div class="container">
+	  	<div class="row">
+	  		<div class=" d1 col-lg-2 col-md-2 col-sm-2 col-xs-4">
+		  			<img src="images/log1.png" >
+	  		</div>
+	  		<div class=" d2 col-lg-4 col-md-4 col-sm-4 col-xs-4 hidden-sm-ul">
+	  			<ul class="list-inline hidden-xs">
+	  				<li><a href="#">目的地</a></li>
+	  				<li class="l2" id="l2">
+	  					<a href="#">发现<span class="caret"></span></a>
+					<div class="ly">
+						<a href="#">周边游</a>
+						<a href="#">国内游</a>
+						<a href="#">出境游</a>
+					</div>
+                    </li>
+	  				<li><a href="#">大咖</a></li>
+	  				<li><a href="#">自驾</a></li>
+	  				<li class="l3" id="l3"><a href="#">预定<span class="caret"></span></a>
+	  				 <div class="ly1">
+						<a href="#">酒店</a>
+						<a href="#">地接</a>
+						<a href="#">度假</a>
+					</div>
+	  				</li>
+	  			</ul>
+	  			<div class="d2_1 hidden-lg hidden-md hidden-sm">
+	  				<span class="glyphicon glyphicon-list"></span>
+	  			</div>
+	  		</div>
+	  		<div class=" d3 col-lg-3 col-md-3 col-sm-3 col-xs-4">
+	  			<input type="text" placeholder="我为浪漫天涯代言" class="hidden-xs">
+	  			<span class="glyphicon glyphicon-search sp1"></span>
+	  			<div class="d3_1  hidden-lg hidden-md hidden-sm ">
+	  				<span class="glyphicon glyphicon-share"></span>
+	  			</div>
+	  		</div>
+	  		<div class=" d4 3col-lg-3 col-md-3 col-sm-3 hidden-xs">
+	  			<ul class="">
+		  			<li class="li2"></li>
+					<li class="li3"></li>
+					<li class="li4"><a href="#">注册</a></li>
+					<li class="li4"><a href="#">登录</a></li>
+	  			</ul>
+	  		</div>
+	  	</div>
+	  </div>
+	</header>
+	<div class="content">
+		<div class="container">
+		<div class="row">
+			<div class=" left col-lg-2 col-md-2 hidden-sm hidden-xs" style="clear: both;">
+				<ul class="tab"  style="clear: both;">
+					<li id="tab_l1">
+					<div class="tabl1_d" id="tabl1_d">
+						<div class="tab1">
+							<div class="tsp1"></div>
+							<div class="tsp2">北京周边</div>
+						</div>
+						<div class="tab2">切换<span class="caret"></span></div>
+					</div>
+					</li>
+					<li id="tab_l2">
+						<div class="tabl1_d1" id="tabl1_d1">
+						<div class="tab1">
+							<div class="tsp1"></div>
+							<div class="tsp2">国内自驾</div>
+						</div>
+					</div>
+					</li>
+					<li id="tab_l3">
+						<div class="tabl1_d2" id="tabl1_d2">
+						<div class="tab1">
+							<div class="tsp1"></div>
+							<div class="tsp2">境外自驾</div>
+						</div>
+					</div>
+					</li>
+				</ul>
+				<!-- <div class=" hd hd1" style="background-color: red;">
+					1
+				</div>
+				<div class="hd hd2" style="background-color: blue;">2</div>
+				<div class="hd hd3" style="background-color: green;">3</div> -->
+			</div>
+			<!-- 隐藏部分 -->
+			<div class="hidden1"></div>
+			<div class="hidden2"></div>
+			<!-- 隐藏部分 -->
+			<div class=" right1 col-lg-5 col-md-5 hidden-sm hidden-xs">
+				<div class="rig_d">
+					<img src="images/cc1.jpg">
+					<span class="rig_sp">鄂尔多斯去自驾  听那风吹响沙</span>
+				</div>
+			</div>
+			<div class=" right2 col-lg-5 col-md-5 col-sm-12 col-xs-12">
+				<div id="carousel-example-generic" class="carousel slide rig2_d" data-ride="carousel">
+				  <!-- Indicators -->
+				  <ol class="carousel-indicators hidden-lg hidden-md">
+				    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="1"></li>
+				    <li data-target="#carousel-example-generic" data-slide-to="2"></li>
+				  </ol>
+
+				  <!-- Wrapper for slides -->
+				  <div class=" div1 carousel-inner" role="listbox">
+				    <div class="item active">
+				      <img src="images/cc2.jpg" alt="...">
+				      <div class="carousel-caption">
+				        无人区记忆—穿越罗布泊 行摄阿尔金山
+				      </div>
+				    </div>
+				    <div class="item">
+				      <img src="images/cc3.jpg" alt="...">
+				      <div class="carousel-caption">
+				        驰驾四国 追逐动人的北欧童话
+				      </div>
+				    </div>
+				     <div class="item">
+				      <img src="images/cc4.jpg" alt="...">
+				      <div class="carousel-caption">
+				       “勇创大漠，勘破生死”地狱级惊艳之旅
+				      </div>
+				    </div>
+				  </div>
+
+				  <!-- Controls -->
+				  <a class="a1 carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+				    <span class=" a1_s1 glyphicon glyphicon-menu-left"></span>
+				    <span class="sr-only">Previous</span>
+				  </a>
+				  <a class=" a2 carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+				    <span class="a1_s2 glyphicon glyphicon-menu-right" aria-hidden="true"></span>
+				    <span class="sr-only">Next</span>
+				  </a>
+				</div>
+			</div>
+		</div>
+		</div><!-- container -->
+	<div class="right">
+<div id="superContainer" style="top: 0px;">
+    <div class="section section1 active" data-anchor="page1" style="height: 599px;">
+       
+        
+    </div>
+    <div class="section section2" data-anchor="page2" style="height: 599px;">
+        22
+    </div>
+    <div class="section section3" data-anchor="page3" style="height: 599px;">
+
+    fjfjdjdsdsksk
+    </div>
+</div>
+<div id="fullPage-nav" class="right" style="color: rgb(0, 0, 0); margin-top: -46.5px;">
+    <ul>
+        <li><a href="#page1" class="active"><span></span></a>
+            <div class="fullPage-tooltip right"></div>
+        </li>
+        <li><a href="#page2" class=""><span></span></a></li>
+        <li><a href=" #page3 " class=" "><span></span></a></li></ul></div>
+</div>
+
+<!-- right -->
+</div>
+<!-- content -->
+<footer></footer>
+<script>
+$(function() {
+    $.fn.fullpage({
+        verticalCentered: false,
+        anchors: ['page1', 'page2', 'page3'],
+        navigation: true
+    });
+});
+</script>
+</body>
+
+</html>

@@ -2,21 +2,118 @@
 <html lang="zh-CN">
 <head>
 	<meta charset="UTF-8">
-	<meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<title>首页</title>
-	<link rel="stylesheet" type="text/css" href="css/index.css">
+    <link rel="stylesheet" type="text/css" href="css/index.css">
 	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
 	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
-	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<!-- <script type="text/javascript" src="js/bootstrap.min.js"></script> -->
 	<script type="text/javascript" src="js/index.js"></script>
 	<script type="text/javascript" src="js/zhoubian.js"></script>
+	<link rel="stylesheet" type="text/css" href="css/lanrenzhijia.css">	
+<script type="text/javascript">
+		$(function() {
+
+	var exits = ['fadeOut', 'fadeOutDown', 'fadeOutUpBig', 'bounceOut', 'bounceOutDown', 'hinge',
+				'bounceOutUp', 'bounceOutLeft', 'rotateOut', 'rotateOutUpLeft', 'lightSpeedOut', 'rollOut'];
+
+	var entrances = ['fadeIn', 'fadeInDown', 'fadeInRight', 'bounceIn', 'bounceInRight', 'rotateIn',
+					 'rotateInDownLeft', 'lightSpeedIn', 'rollIn', 'bounceInDown' ]; 
+	
+	var photos = $('#photos'),
+		ignoreClicks = false;
+
+		$('.arrow').click(function(e, simulated){
+			if(ignoreClicks){
+				
+				// If clicks on the arrows should be ignored,
+				// stop the event from triggering the rest 
+				// of the handlers
+				
+				e.stopImmediatePropagation();
+				return false;
+			}
+			
+			// Otherwise allo this click to proceed,
+			// but raise the ignoreClicks flag
+			
+			ignoreClicks = true;
+			
+			if(!simulated){
+				// Once the user clicks on the arrows,
+				// stop the automatic slideshow
+				clearInterval(slideshow);
+			}
+		});
+
+		// Listen for clicks on the next arrow
+		$('.arrow.next').click(function(e){
+			
+			e.preventDefault();
+			
+			// The topmost element
+			var elem = $('#photos li:last');
+			
+			// Apply a random exit animation
+			elem.addClass('animated')
+				.addClass( exits[Math.floor(exits.length*Math.random())] );
+		
+		setTimeout(function(){
+			
+			// Reset the classes
+			elem.attr('class','').prependTo(photos);
+			
+			// The animation is complate!
+			// Allow clicks again:
+			ignoreClicks = false;
+			
+			},1000);
+		});
+
+		// Listen for clicks on the previous arrow
+		$('.arrow.previous').click(function(e){
+			
+			e.preventDefault();
+		
+		// The bottom-most element
+		var elem = $('#photos li:first');
+		
+		// Move the photo to the top, and 
+		// apply a random entrance animation
+		
+		elem.appendTo(photos)
+			.addClass('animated')
+			.addClass( entrances[Math.floor(entrances.length*Math.random())] );
+		
+		setTimeout(function(){
+			
+			// Remove the classess
+			elem.attr('class','');
+			
+			// The animation is complate!
+			// Allow clicks again:
+			ignoreClicks = false;
+			
+			},1000);
+		});
+
+
+		// Start an automatic slideshow
+		var slideshow = setInterval(function(){
+			
+			// Simulate a click every 1.5 seconds
+			$('.arrow.next').trigger('click',[true]);
+			
+		}, 1500);
+	
+   });
+</script>
+	
 </head>
-<body style="background-color: #F1F1F1;">
-	<header>
-	   <div class="head_d1">
+<body>
+<header>
+	 <div class="head_d1">
 		<ul class="row">
-			<li class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-1 col-xs-2"><a href="index.html">首页</a></li>
+			<li class="col-lg-offset-1 col-lg-2 col-md-offset-1 col-md-2 col-sm-offset-1 col-sm-2 col-xs-offset-1 col-xs-2"><a href="index1.html">首页</a></li>
 			<li class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="place.html">目的地</a></li>
 			<li id="zb" class="col-lg-2 col-md-2 col-sm-2 col-xs-2"><a href="#">周边<span></span></a>
 			<div class="hz" id="hz">
@@ -31,66 +128,21 @@
 			<li class="col-lg-3 col-md-3 col-sm-3 hidden-xs"><a href="#">预定</a></li>
 		</ul>	
 	</div>
-		<!-- 图片轮播 -->
-		<div id="d1" class="carousel slide" data-ride="carousel">
-		<ol class="carousel-indicators">
-			<li data-target="#d1" data-slide-to="0" class="active"></li>
-			<li data-target="#d1" data-slide-to="1"></li>
-			<li data-target="#d1" data-slide-to="2"></li>
-			<li data-target="#d1" data-slide-to="3"></li>
-			<li data-target="#d1" data-slide-to="4"></li>
-		</ol>
-		<div class="carousel-inner" role="listbox">
-			<div class="item imgp active">
-				<img src="images/a1.jpg">
-				<div class="carousel-caption">
-					<h5>印度新娘倒贴嫁妆 新郎一夜暴富上头条</h5>
-					<p>印度 奇葩婚礼 人文趣谈</p>
-				</div>
-			</div>
-			<div class="item imgp">
-				<img src="images/a2.jpg">
-				<div class="carousel-caption">
-					<h5>玩命飙！不限速的德意志，每天上演警匪追逐大片</h5>
-					<p>德国 高速公路 汽车 自驾 赛道 赛车</p>
-				</div>
-			</div>
-			<div class="item imgp">
-				<img src="images/a3.jpg">
-				<div class="carousel-caption">
-					<h5>大圣故里花果山 西游胜境连云港</h5>
-					<p>花果山 海上云台山 孔望山 桃花涧 大伊山</p>
-				</div>
-			</div>
-			<div class="item imgp">
-				<img src="images/a4.jpg">
-				<div class="carousel-caption">
-					<h5>走歪门斜道，雨中潜入傅家老宅“盗宝”</h5>
-					<p>——走近镇远古镇傅家大院</p>
-				</div>
-			</div>
-			<div class="item imgp">
-				<img src="images/a5.jpg">
-				<div class="carousel-caption">
-					<h5>这里是镇远，不要再说它很像凤凰古城了</h5>
-					<p>贵州黔东南 镇远夜景 龙舟赛 游船</p>
-				</div>
-			</div>
-		</div>
-		<!-- <a href="#d1" class="left carousel-control" role="button" data-slide="prev">
-			    <span class="glyphicon glyphicon-chevron-left"></span>
-		        <span class="sr-only">Previous</span>
-		</a>
-		<a href="#d1" class="right carousel-control" role="button" data-slide="next">
-			    <span class="glyphicon glyphicon-chevron-right"></span>
-		        <span class="sr-only">Next</span>
-		</a> -->
-		</div>
-	</header>
-    <div class="right-fix">
+<div class="bd1">
+ <ul id="photos">
+  <li><a href="#" style="background-image:url(images/a1.jpg)"></a></li>
+  <li><a href="#" style="background-image:url(images/a2.jpg)"></a></li>
+  <li><a href="#" style="background-image:url(images/a3.jpg)">Landscape 3</a></li>
+  <li><a href="#" style="background-image:url(images/a4.gif)">Landscape 2</a></li>
+  <li><a href="#" style="background-image:url(images/a5.jpg)">Landscape 1</a></li>
+</ul>
+<a href="#" class="arrow previous"></a> <a href="#" class="arrow next"></a>
+	</div>
+</header>
+<div class="right-fix">
 		<a href="#"><img src="images/ltFeedback.png"></a>
 	</div>
-	<div class="content">
+	<div class="content" style="margin-top: 510px;">
 		<div class="con_d1">
 			<h2>Recommended amazing places just for you</h2>
 			<h1>看吧，世界正美，还要等你多久</h1>

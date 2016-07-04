@@ -1,0 +1,618 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>目的地</title>
+	<link rel="stylesheet" href="css/jquery.fullPage.css">
+	<link rel="stylesheet" type="text/css" href="css/zijia1.css">
+	<link rel="stylesheet" type="text/css" href="css/place.css">
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=6edAqiaSblxW2Vp2Z9RGLRdgIkDDq5l8"></script>
+	<script type="text/javascript" src="js/jquery-1.10.2.min.js"></script>
+	<script type="text/javascript" src="js/bootstrap.min.js"></script>
+	<script type="text/javascript" src="js/zijia.js"></script>
+	<script src="js/jquery.adipoli.min.js" type="text/javascript"></script>
+	<script type="text/javascript" src="js/place.js"></script>
+    <script src="js/scrollReveal.js"></script> 
+    
+</head>
+<body>
+	<header>
+	  <div class="container1">
+	  	<div class="row">
+	  		<div class=" d1 col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-lg-2 col-md-2 col-sm-2 col-xs-4">
+		  	 <img src="images/log1.png" >
+	  		</div>
+	  		<div class=" d2 col-lg-4 col-md-4 col-sm-4 col-xs-4 hidden-sm-ul">
+	  			<ul class="list-inline hidden-xs">
+	  				<li><a href="place.html">目的地</a></li>
+	  				<li class="l2" id="l2">
+	  					<a href="#">发现<span class="caret"></span></a>
+					<div class="ly">
+						<a href="zhoubian.html">周边游</a>
+						<a href="#">国内游</a>
+						<a href="#">出境游</a>
+					</div>
+                    </li>
+	  				<li><a href="daka.html">大咖</a></li>
+	  				<li><a href="zijia1.html">自驾</a></li>
+	  				<li class="l3" id="l3"><a href="#">预定<span class="caret"></span></a>
+	  				 <div class="ly1">
+						<a href="#">酒店</a>
+						<a href="#">地接</a>
+						<a href="#">度假</a>
+					</div>
+	  				</li>
+	  			</ul>
+	  			<div class="d2_1 hidden-lg hidden-md hidden-sm">
+	  				<span class="glyphicon glyphicon-list"></span>
+	  			</div>
+	  		</div>
+	  		<div class=" d3 col-lg-3 col-md-3 col-sm-3 col-xs-4">
+	  			<input type="text" placeholder="我为浪漫天涯代言" class="hidden-xs">
+	  			<span class="glyphicon glyphicon-search sp1"></span>
+	  			<div class="d3_1  hidden-lg hidden-md hidden-sm ">
+	  				<span class="glyphicon glyphicon-share"></span>
+	  			</div>
+	  		</div>
+	  		<div class=" d4 col-lg-2 col-md-2 col-sm-2 hidden-xs">
+	  			<ul class="">
+		  			<li class="li2"></li>
+					<li class="li3"></li>
+					<li class="li4"><a href="#">注册</a></li>
+					<li class="li4"><a href="#">登录</a></li>
+	  			</ul>
+	  		</div>
+	  	</div>
+	  </div>
+	</header>
+	<div class="right-fix">
+		<a href="#"><img src="images/ltFeedback.png"></a>
+	</div>
+	<div class="content container-fluid">
+		<div class="row" style="background-color: #E1E1E1;">
+			<div class=" d1 col-md-offset-1 col-sm-offset-1 col-lg-3 col-md-2 col-sm-2 hidden-xs">
+				<div class="cont1">
+					<div class="cont1_ul">
+					   <div class="cont1_l1">
+							    <div class="fcont">
+								<h4>自然天赋</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+								</div>
+								<ul class="aas">
+									<li>田园</li>
+									<li>花卉</li>
+									<li>湖泊</li>
+									<li>海滩海岛</li>
+									<div style="clear: both;"></div>
+								</ul>
+								<div style="clear: both;"></div>
+					   </div>
+					   <div class="cont1_l2">
+							    <div class="fcont">
+								<h4>魅力人文</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+								</div>
+								<ul class="aas">
+									<li>古墓</li>
+									<li>园林</li>
+									<li>城堡</li>
+									<li>古城古镇</li>
+									<div style="clear: both;"></div>
+								</ul>
+								<div style="clear: both;"></div>
+					   </div>
+					   <div class="cont1_l3">
+							    <div class="fcont">
+								<h4>运动撒野</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+								</div>
+								<ul class="aas">
+									<li>蹦极</li>
+									<li>攀岩</li>
+									<li>骑行</li>
+									<li>潜水</li>
+									<div style="clear: both;"></div>
+								</ul>
+								<div style="clear: both;"></div>
+					   </div>
+					   <div class="cont1_l4">
+							    <div class="fcont">
+								<h4>休闲体验</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+								</div>
+								<ul class="aas">
+									<li>购物</li>
+									<li>夜市</li>
+									<li>观鸟</li>
+									<li>油轮</li>
+									<div style="clear: both;"></div>
+								</ul>
+								<div style="clear: both;"></div>
+					   </div>
+					   <div class="cont1_l5">
+							    <div class="fcont">
+								<h4>因人而异</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+								</div>
+								<ul class="aas">
+									<li>艳遇</li>
+									<li>吃货</li>
+									<li>亲子</li>
+									<li>摄影咖</li>
+									<div style="clear: both;"></div>
+								</ul>
+								<div style="clear: both;"></div>
+					   </div>
+					   <div class="cont1_l6">
+					   	  <div class="fcont">
+								<h4>假日狂欢</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+						  </div>
+					   </div>
+					   <div class="cont1_l7">
+					   	  <div class="fcont">
+								<h4>传奇之旅</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+						  </div>
+					   </div>
+					   <div class="cont1_l8">
+					   	  <div class="fcont">
+								<h4>签证方式</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+						  </div>
+					   </div>
+					   <div class="cont1_l9">
+					   	  <div class="fcont">
+								<h4>经典传奇</h4>
+								<span class="glyphicon glyphicon-menu-right"></span>
+								<div style="clear: both;"></div>
+						  </div>
+					   </div>
+					</div>
+				</div>
+			</div>
+			<div class=" d2 col-lg-9 col-md-9 col-sm-8 hidden-xs">
+				<div class="cont2" id="milkMap"></div>
+			</div>
+		</div>
+		<div class="content2 row">
+			<ul id="box" class="box hidden-xs">
+				<li><img src="images/ap1.jpg"></li>
+				<li><img src="images/ap2.jpg"></li>
+				<li><img src="images/ap3.jpg"></li>
+				<li><img src="images/ap4.jpg"></li>
+				<li><img src="images/ap5.jpg"></li>
+			</ul>
+		</div>
+		<div class="content3 row">
+			<div class="content3_d1 hidden-xs">
+				<h1>跟随兴趣去旅行，全年随时出发</h1>
+				<h4>世界很大，给不安分的心一个躁动的理由</h4>
+			</div>
+            <div class="content3_d2">
+            	<div class="row">
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6" id="dd-1">
+            			<div class="dd1"></div>
+            			<img src="images/img1.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon1.png"><br/>
+            			<span>体味别样城市风情</span>
+            			</div>
+
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img2.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon2.png"><br/>
+            			<span>网络世界最好的购物体验</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img3.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon3.png"><br/>
+            			<span>带着孩子去旅行</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img4.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon4.png"><br/>
+            			<span>最具特色的住宿体验</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img5.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon5.png"><br/>
+            			<span>探秘求知，来一次神秘的文化之旅</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img6.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon6.png"><br/>
+            			<span>他们是本地人最炫耀的名片</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img7.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon7.png"><br/>
+            			<span>共享各地浓郁民族风情</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img8.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon8.png"><br/>
+            			<span>全球最震撼人心的地质奇观</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img9.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon9.png"><br/>
+            			<span>在博物馆里见证文明变迁</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img10.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon10.png"><br/>
+            			<span>吃货世界，满满的饕餮美食</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img11.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon11.png"><br/>
+            			<span>摄影咖们爱"秀"的地方</span>
+            			</div>
+            		</div>
+            		<div class="dd col-lg-3 col-md-3 col-sm-4 col-xs-6">
+            		    <div class="dd1"></div>
+            			<img src="images/img12.jpg" class="ig1">
+            			<span class="imgs1"></span>
+            			<div class="ig2">
+            			<img src="images/icon12.png"><br/>
+            			<span>他们都是最美乡村</span>
+            			</div>
+            		</div>
+            	</div>
+            </div>
+		</div>
+	</div>
+	<div class="content4 container-fluid">
+			<div class="row">
+				<div class=" dv col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="cont4_d1">
+						<h2>想不想做一把“浪子” 与海浪的完美追逐</h2>
+						<div class="cont4_d11">冲浪可以让人们忘却烦恼，体验一次次与海浪搏击、驰骋在海浪上的快感。这就是为什么在世界上每天都会有许多人四处寻找着一处最完美的冲浪胜地，仅为完成一次与海浪的完美追逐</div>
+						<div class="cont4_d12"><a href="#"><i>Move>></i></a></div>
+					</div>
+					<div class=" row cont4_d2 clearfix" id="cont4_d2">
+						<div class="cont4_d21 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_d21">
+						    <div class="imgd1">
+							<img src="images/z1.jpg">
+							</div>
+							<div class="d21-i1">
+								<a href="#">库塔海滩的沙滩质量并不算太好，但这里确实是冲浪的好地方</a>
+							</div>
+						</div>
+						<div class="cont4_d22 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_d22">
+							<div class="imgd2">
+								<img src="images/z2.jpg">
+							</div>
+							<div class="d21-i1">
+								<a href="#">巴厘岛库塔海滩，南纬8°的遇见</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class=" dv col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="cont4_a1 dowebok" data-scroll-reveal="enter top over 3s after 0.5s">
+						<h2>抓紧皮筏 放声呐喊 去惊涛骇浪中寻找刺激</h2>
+						<div class="cont4_a11">在时而湍急时而平缓的水流中顺流而下，越过峡谷，穿过森林，乘着橡皮艇，一起天高水长，逍遥快活。快来寻找这份惊险和刺激，抓紧皮筏，一起出发吧！</div>
+						<div class="cont4_a12"><a href="#"><i>Move>></i></a></div>
+					</div>
+					<div class=" row cont4_a2 clearfix" id="cont4_a2">
+						<div class="cont4_a21 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_a21">
+						    <div class="imga1">
+							<img src="images/z3.jpg">
+							</div>
+							<div class="a21-i1">
+								<a href="#">库塔海滩的沙滩质量并不算太好，但这里确实是冲浪的好地方</a>
+							</div>
+						</div>
+						<div class="cont4_a22 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_a22">
+							<div class="imga2">
+								<img src="images/z4.jpg">
+							</div>
+							<div class="a21-i1">
+								<a href="#">巴厘岛库塔海滩，南纬8°的遇见</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class=" dv col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="cont4_b1 dowebok" data-scroll-reveal="enter top over 3s after 0.5s">
+						<h2>吃货必备 最火爆的夜市美食城市</h2>
+						<div class="cont4_b11">市是一座城市的另一个读本，代表着当地的美食文化，当然也是每一个旅游吃货必备攻略。最全的攻略，等待对美食最有诚意的你！</div>
+						<div class="cont4_b12"><a href="#"><i>Move>></i></a></div>
+					</div>
+					<div class=" row cont4_b2 clearfix" id="cont4_b2">
+						<div class="cont4_b21 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_b21">
+						    <div class="imgb1">
+							<img src="images/z5.jpg">
+							</div>
+							<div class="b21-i1">
+								<a href="#">库塔海滩的沙滩质量并不算太好，但这里确实是冲浪的好地方</a>
+							</div>
+						</div>
+						<div class="cont4_b22 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_b22">
+							<div class="imgb2">
+								<img src="images/z6.jpg">
+							</div>
+							<div class="b21-i1">
+								<a href="#">巴厘岛库塔海滩，南纬8°的遇见</a>
+							</div>
+						</div>
+					</div>
+				</div>
+				<div class="dv col-lg-12 col-md-12 col-sm-12 col-xs-12">
+					<div class="cont4_c1 dowebok" data-scroll-reveal="enter top over 3s after 0.5s">
+						<h2>吃货必备 最火爆的夜市美食城市</h2>
+						<div class="cont4_c11">市是一座城市的另一个读本，代表着当地的美食文化，当然也是每一个旅游吃货必备攻略。最全的攻略，等待对美食最有诚意的你！</div>
+						<div class="cont4_c12"><a href="#"><i>Move>></i></a></div>
+					</div>
+					<div class="row cont4_c2 clearfix" id="cont4_c2">
+						<div class="cont4_c21 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_c21">
+						    <div class="imgc1">
+							<img src="images/z7.jpg">
+							</div>
+							<div class="c21-i1">
+								<a href="#">库塔海滩的沙滩质量并不算太好，但这里确实是冲浪的好地方</a>
+							</div>
+						</div>
+						<div class="cont4_c22 col-lg-6 col-md-6 col-sm-12 col-xs-12" id="cont4_c22">
+							<div class="imgc2">
+								<img src="images/z8.jpg">
+							</div>
+							<div class="c21-i1">
+								<a href="#">巴厘岛库塔海滩，南纬8°的遇见</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>	
+	</div>
+	<div class="content5">
+		<img src="images/z9.jpg">
+	</div>
+	<!-- 地图 -->
+<script type="text/javascript">
+         var map = new BMap.Map("milkMap");
+          var MyArray = new Array();
+         //创建和初始化地图函数：
+         function initMap() {
+              createMap(108.95, 34.254); //创建地图
+             setMapEvent(); //设置地图事件
+             addMapControl(); //向地图添加控件
+         }
+         var t = 0; 
+          var  xmlhttp = new XMLHttpRequest();
+         function GetLableValues() {
+             t = t + 1;
+             for (var i = 0; i < MyArray.length; i++)
+             {
+                  var x = '<%=GetValue("' + MyArray[i].id +'")%>';
+                 MyArray[i].label.setContent(x);
+              }
+         }
+ 
+ 
+         function state_Change(label)
+         {
+             if (xmlhttp.status == 200) {
+                 label.setContent(xmlhttp.responseText);
+            }
+         
+          }
+  
+  
+  
+          //创建地图函数：
+         function createMap(lng, lat) {
+              //在百度地图容器中创建一个地图
+              var point = new BMap.Point(lng, lat); //定义一个中心点坐标
+              map.centerAndZoom(point, 17); //设定地图的中心点和坐标并将地图显示在地图容器中
+             window.map = map; //将map变量存储在全局
+              //            MyLabel(lng, lat,1,1);
+          }
+         function NewLabel(opts, label, id) {
+              this.opts = opts;
+              this.label = label;
+              this.id = id;
+ 
+         }
+         function setLabelContent(str, id) {
+ 
+ 
+             for (var i = 0; i < MyArray.length; i++) {
+                 if (MyArray[i].id == id) {
+                     MyArray[i].label.setContent(str);
+                     break;
+                  }
+             }
+          }
+          function MyLabel(lng, lat, str, id) {
+  
+  
+              var opts = {
+                 position: new BMap.Point(lng, lat),    // 指定文本标注所在的地理位置
+                  offset: new BMap.Size(30, -30)    //设置文本偏移量
+ 
+              }
+ 
+             var label = new BMap.Label(str, opts);  // 创建文本标注对象
+ 
+             label.setStyle({
+                 color: "red",
+                 fontSize: "12px",
+                 height: "20px",
+                 lineHeight: "20px",
+                  fontFamily: "微软雅黑"
+              });
+ 
+             var label = new NewLabel(opts, label, id);
+              MyArray[0] = label;
+             map.addOverlay(MyArray[0].label);
+              self.setInterval("GetLableValues()", 1000);
+              //            alert(MyArray.length);
+              //            MyArray[0].label.setContent("dddd")
+         }
+          //地图事件设置函数：
+          function setMapEvent() {
+              map.enableDragging(); //启用地图拖拽事件，默认启用(可不写)
+              map.enableScrollWheelZoom(); //启用地图滚轮放大缩小
+             map.enableDoubleClickZoom(); //启用鼠标双击放大，默认启用(可不写)
+             map.enableKeyboard(); //启用键盘上下左右键移动地图
+          }
+  
+          //地图控件添加函数：
+          function addMapControl() {
+            //向地图中添加缩放控件
+              var ctrl_nav = new BMap.NavigationControl({ anchor: BMAP_ANCHOR_TOP_LEFT, type: BMAP_NAVIGATION_CONTROL_LARGE });
+              map.addControl(ctrl_nav);
+             //向地图中添加缩略图控件
+             var ctrl_ove = new BMap.OverviewMapControl({ anchor: BMAP_ANCHOR_BOTTOM_RIGHT, isOpen: 1 });
+              map.addControl(ctrl_ove);
+              //向地图中添加比例尺控件
+              var ctrl_sca = new BMap.ScaleControl({ anchor: BMAP_ANCHOR_BOTTOM_LEFT });
+             map.addControl(ctrl_sca);
+         }
+ 
+         initMap(); //创建和初始化地图
+</script>
+    <!-- 地图 -->
+<footer class="footer">
+    <div class="foot_1"></div>
+	<div class="row">
+		<div class=" col-lg-offset-1 col-md-offset-1 col-sm-offset-1 col-xs-offset-1 col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li><a href="#">关于我们</a></li>
+				<li><a href="#">乐途介绍</a></li>
+				<li><a href="#">招贤纳士</a></li>
+				<li><a href="#">网站荣誉</a></li>
+				<li><a href="#">联系我们</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li><a href="#">营销服务</a></li>
+				<li><a href="#">乐途营销</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li><a href="#">商家服务</a></li>
+				<li><a href="#">商家入驻</a></li>
+				<li><a href="#">商家登录</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li><a href="#">新手服务</a></li>
+				<li><a href="#">预定帮助</a></li>
+				<li><a href="#">服务条款</a></li>
+				<li><a href="#">版权声明</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li><a href="#">合作伙伴</a></li>
+				<li><a href="#">国家旅游局</a></li>
+				<li><a href="#">央视网旅游</a></li>
+				<li><a href="#">[全部]</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-4">
+		   <ul>
+		   	<li></li>
+		   	<li><a href="#">人民网旅游</a></li>
+		   	<li><a href="#">中国日报</a></li>
+		   </ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">
+			<ul>
+				<li></li>
+				<li><a href="#">光明网旅游</a></li>
+			</ul>
+		</div>
+		<div class="col-lg-1 col-md-2 col-sm-3 col-xs-3 div1">
+		    <h6>关注我们</h6>
+		    <ul class="foot_dul">
+		    	<li><a class="foot_d1"></a></li>
+		    	<li><a class="foot_d2"></a></li>
+		    	<li><a class="foot_d3"></a></li>
+		    	<li><a class="foot_d4"></a></li>
+		    	<li><a class="foot_d5"></a></li>
+		    </ul>
+		</div>
+		<div class="col-lg-2 col-md-2 col-sm-3 col-xs-3">
+			<h6>官方微信</h6>
+		    <img src="images/vcode1.jpg">
+		</div>
+	</div>
+	<div class="foot_2">
+		<div class="a">
+			<img src="images/btmlogo.png">
+			<img src="images/btmpic.png" class="im1">
+			<div class="foot_22">
+				<div class="foot_221">
+					<ul>
+						<li><a href="#">京ICP备12008860号-1</a></li>
+						<li><a href="#">广电节目制作许可证：1313号</a></li>
+						<li><a href="#">京公网安备：11010502001653</a></li>
+					</ul>
+				</div>
+				<div class="foot_222">Copyright © 2005 - 2016  Lotour.com  All Rights Reserved. 乐途旅游网 版权所有</div>
+			</div>
+			<div style="clear: both;"></div>
+		</div>	
+	</div>
+	<div class="foot_3"></div>
+</footer>
+</body>
+</html>
